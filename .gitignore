@@ -1,0 +1,21 @@
+
+# Ignore bundler config.
+/.bundle
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+npm-debug.log
+dump.rdb
+
+# Ignore env variables file.
+.env
+
+# Ignore Byebug command history file.
+.byebug_history
+
+# Ignore IDE files
+.idea
+node_modules

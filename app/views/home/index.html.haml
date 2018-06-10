@@ -1,0 +1,56 @@
+.container
+	%h1 Hi
+	%h4 hihi
+
+	.full-width
+	.span12
+		%ul.pagination
+		#subjectPanel
+			- begin
+				- @ticket_info['tickets'].each do |ticket|
+					%li.subject_panel{:id => "panel_"+ticket['id'].to_s}
+						%a.links{"aria-expanded" => "false", "data-toggle" => "collapse", :href => "#ticket_#{ticket['id'].to_s}", style: ticket['status'] == 'open'? 'color: #0284ff' : 'color: #E5E5E5'}
+							%i
+							= ticket['subject']
+						.collapse.info-canvas{"aria-expanded" => "false", :id => "ticket_"+ticket['id'].to_s}
+							%table.span12
+								- ticket.each do |ticket_content|
+									- if ticket_content[1].present? && ticket_content[0]!= 'via'
+										%tr
+											%th
+												= ticket_content[0] + ": "
+											%td
+												= ticket_content[1]
+				%ul.pagination
+			- rescue
+				.error-msg
+					%h4  Oops we currently run into some problems: 
+					= @error_message
+
+
+	:javascript
+		$(document).ready(function () {
+		// ticket number devide by 25 to decide pages
+			var ticketDisplayLimit = 25;
+			var pageNum = Math.ceil($(".subject_panel").length / ticketDisplayLimit);
+
+		// if greater than 25 items, display pagination
+			if (pageNum > 1){
+				$('.subject_panel').hide();
+				$('.subject_panel').slice(0,ticketDisplayLimit).show();
+				for (var i = 1; i < pageNum + 1; i++){
+					var pageCount = '<li><a class="page-btn" page="'+i+'" href="">'+i+'</a></li>';
+					$('.pagination').append(pageCount);        
+				}
+			}
+
+			// click page btn
+			$('.page-btn').on('click', function(e){
+				e.preventDefault();
+				var currentPageNum = $(this).attr('page');
+
+			// display tickets according to page num
+				$('.subject_panel').hide();
+				$('.subject_panel').slice((currentPageNum - 1) * ticketDisplayLimit, currentPageNum * ticketDisplayLimit).show();
+			});
+		});
