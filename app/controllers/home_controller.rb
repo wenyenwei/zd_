@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
 	before_action :request_tickets
-  
+
   def index
   end
 

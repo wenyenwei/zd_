@@ -1,24 +1,25 @@
 require 'test_helper'
 
 class HomeControllerTest < ActionDispatch::IntegrationTest
-  # test "request response status should be 200" do
-  # 	assert_equal "200", @response.status
-  # end
 
-  test "response body @ticket_info type should be JSON" do
-  	get root_path
-  	puts 'controller',@controller.inspect
-
-  	assert_equal "application/json", @ticket_info.content_type
+  test "request ticket method should return JSON tickets" do
+  	@controller = HomeController.new
+    # private method request_tickets should return a not-nil JSON element 'tickets'
+    assert_not_nil @controller.send(:request_tickets)['tickets']
   end
 
-  test "should be success loading homepage and show header" do
-    get root_path 
+
+  test "home page should render successfully and show tickets" do
+    get root_path
+    # get home page response success 
     assert_response :success
+    # show header
+    assert_select "h1", "Zendesk Intern Challenge"
+    # show tickets listing under #subjectPanel
+    assert_select "#subjectPanel" do
+      assert_select "li.subject_panel"
+    end
   end
-
- #  test "home page should show tickets" do
- #  end
 
  #  test "page should switch if click page buttons" do
 	# end
