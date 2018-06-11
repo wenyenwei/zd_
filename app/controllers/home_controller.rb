@@ -1,21 +1,20 @@
 class HomeController < ApplicationController
-	before_action :request_tickets
   
   def index
+    request_tickets(ENV['ZENDESK_DOMAINNAME_URL'], ENV['ZENDESK_USERNAME'], ENV['ZENDESK_PASSWORD'])
   end
 
   private
 
-  def request_tickets
+  def request_tickets(zendesk_url, zendesk_uid, zendesk_pwd)
     begin
       # use faraday library for http request
       require 'faraday'
-      url = "https://#{ENV['ZENDESK_DOMAINNAME']}.zendesk.com/api/v2/tickets.json"
-      conn = Faraday.new(:url => url) do |conn|
+      conn = Faraday.new(:url => zendesk_url) do |conn|
         conn.use Faraday::Response::RaiseError
         conn.use Faraday::Adapter::NetHttp
         # connect with authentication
-        conn.basic_auth(ENV['ZENDESK_USERNAME'], ENV['ZENDESK_PASSWORD'])
+        conn.basic_auth(zendesk_uid, zendesk_pwd)
       end
       response = conn.get 
       # pass response to front
