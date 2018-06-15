@@ -84,18 +84,32 @@
 
 		// if greater than 25 items, display pagination
 			if (pageNum > 1){
+	
 				$('.subject_panel').hide();
 				$('.subject_panel').slice(0,ticketDisplayLimit).show();
+		
 				for (var i = 1; i < pageNum + 1; i++){
-					var pageCount = '<li><a class="page-btn" page="'+i+'" href="">'+i+'</a></li>';
-					$('.pagination').append(pageCount);        
+					var pageCount = '<li><a class="page-btn page'+i+'" page="'+i+'" href="">'+i+'</a></li>';
+					$('.pagination').append(pageCount);     
 				}
+				var prev_page = '<li><a class="page-btn prev-btn" page="1" href=""></a></li>';
+				var next_page = '<li><a class="page-btn next-btn" page="'+pageNum+'" href=""></a></li>'
+				$('.pagination').prepend(prev_page);   
+				$('.pagination').append(next_page);  
 			}
 
 			// click page btn
 			$('.page-btn').on('click', function(e){
 				e.preventDefault();
-				var currentPageNum = $(this).attr('page');
+				var currentPageNum = parseInt($(this).attr('page'));
+			
+			// set prev and next page btn
+				$('.prev-btn').attr('page', (currentPageNum - 1 > 0)? currentPageNum - 1 : 1);
+				$('.next-btn').attr('page', (currentPageNum + 1 < pageNum)? currentPageNum + 1 : pageNum);
+
+			// display active btn according to page
+				$('.page-btn').removeClass('btn-active');
+				$('.page'+currentPageNum).addClass('btn-active');
 
 			// display tickets according to page num
 				$('.subject_panel').hide();
