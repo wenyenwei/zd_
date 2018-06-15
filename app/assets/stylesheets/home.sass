@@ -6,7 +6,7 @@
 a
 	text-decoration: none
 	&:hover, &:active, &:visited, &:focus
-		text-decoration: none
+		text-decoration: none !important
 .subject_panel
 	list-style-type: none
 	border-radius: 10px
@@ -24,11 +24,11 @@ th, td
 
 .page-btn
 	padding: 12px 18px !important
-	color: #0284ff !important
+	color: #737373 !important
 	font-weight: bold !important
 
 .links
-	color: #0284ff
+	color: #737373
 	font-size: 18px
 	transition: all 0.3s ease-in-out
 	-webkit-transition: all 0.3s ease-in-out
@@ -47,12 +47,21 @@ th, td
 			transform: rotate(0deg)
 			transition: all 0.3s ease-in-out
 	&:hover
-		margin-left: 10px
-		color: #0284ff
+		font-size: 20px
+		color: #737373
 
 .info-canvas
 	padding: 20px 40px
-
+	h4
+		font-weight: bold
+	.info-header-p
+		color: grey
+	.info-content-p
+		padding: 20px
+		background-color: #f2f2f2
+		border-radius: 10px
+		line-height: 1.5
+		margin-bottom: 20px
 a[aria-expanded="true"]
 	i
 		font-style: normal
@@ -62,7 +71,7 @@ a[aria-expanded="true"]
 			content: "\f054"
 			font-family: fontawesome
 			font-size: 20px
-			color: #0284ff
+			color: #737373
 			position: relative
 			-ms-transform: rotate(90deg)
 			-webkit-transform: rotate(90deg)
@@ -72,3 +81,49 @@ a[aria-expanded="true"]
 	color: darkgoldenrod
 	border-radius: 10px
 	padding: 15px
+.panel-table
+	th
+		border: none
+
+.subject-style
+	width: 500px
+.id-style
+	width: 50px
+.id-style-header
+	width: 60px
+.time-style
+	width: 100px
+.assign-style-header
+	width: 160px
+.status-th
+	width: 90px
+.status-style
+	width: 60px
+	text-align: center
+	padding: 5px
+	border-radius: 10px
+	color: white
+	font-size: 12px	
+.status-open
+	background-color: #ff6666
+.status-pending
+	background-color: lightblue
+.status-solved
+	background-color: grey
+.header-th 
+	th
+		text-align: center
+		color: #737373
+		font-size: 12px
+.ticket-tag
+	background-color: #d9d9d9
+	border-radius: 10px
+	color: grey
+	font-weight: bold
+	font-size: 12px
+	padding: 6px
+	width: auto
+	margin-right: 5px
+	cursor: pointer
+.info-status-span
+	display: inline-block
