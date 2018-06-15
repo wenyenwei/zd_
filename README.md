@@ -1,24 +1,36 @@
-# README
+# Overview
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+# Setup
 
-* Ruby version
+## Installation on Mac OS 
 
-* System dependencies
+Git clone the repo, and cd into the folder.
 
-* Configuration
+Once you've got the required ruby installed, run the following commands:
 
-* Database creation
+* `gem install bundler`
+* `bundle install`
 
-* Database initialization
+This should download all the required project dependencies.
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+# Running the app
+At this point you should be all good to go. In order to run the rails app, type the following:
 
-* Deployment instructions
+* `rails server`
 
-* ...
+If you ever want to test the site on various devices, you can also run a web server on your machine that opens your
+machine up to external device connections (use with caution).
+
+
+# Testing the app
+To do unit testing to the app, simply follow below:
+
+  
+## Unit tests
+These are written using rails testing. Find unit tests in the `test` folder. 
+
+To run unit tests, run:
+
+* `rake`

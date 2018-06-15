@@ -47,7 +47,5 @@ class HomeControllerTest < ActionDispatch::IntegrationTest
 
  #  test "page should switch if click page buttons" do
 	# end
-
-	
 end
 

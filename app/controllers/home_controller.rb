@@ -3,7 +3,6 @@ class HomeController < ApplicationController
 
   def index
     request_tickets(ENV['ZENDESK_DOMAINNAME_URL'], ENV['ZENDESK_USERNAME'], ENV['ZENDESK_PASSWORD'])
-
   end
 
   private

@@ -6,21 +6,69 @@
 	.span12
 		%ul.pagination
 		#subjectPanel
+			%table.header-th 
+				%tr.panel-table
+					%th.subject-style
+						SUBJECT
+					%th.id-style-header
+						ID
+					%th.status-th
+						STATUS
+					%th
+						UPDATED
+					%th.assign-style-header
+						ASSIGNEE
 			- begin
 				- @ticket_info['tickets'].each do |ticket|
-					%li.subject_panel{:id => "panel_"+ticket['id'].to_s}
-						%a.links{"aria-expanded" => "false", "data-toggle" => "collapse", :href => "#ticket_#{ticket['id'].to_s}", style: ticket['status'] == 'open'? 'color: #0284ff' : 'color: #E5E5E5'}
-							%i
-							= ticket['subject']
-						.collapse.info-canvas{"aria-expanded" => "false", :id => "ticket_"+ticket['id'].to_s}
+					%li.subject_panel.span12{:id => "panel_"+ticket['id'].to_s}
+						%a.links{"aria-expanded" => "false", "data-toggle" => "collapse", :href => "#ticket_#{ticket['id'].to_s}"}
 							%table.span12
-								- ticket.each do |ticket_content|
-									- if ticket_content[1].present? && ticket_content[0]!= 'via'
-										%tr
-											%th
-												= ticket_content[0] + ": "
-											%td
-												= ticket_content[1]
+								%tr.panel-table
+									%th.subject-style
+										%i{style: ticket['status'] == 'open'? 'color: #737373' : 'color: #E5E5E5'}
+
+										= ticket['subject']
+									%th.id-style
+										= ticket['id']
+									%th.status-th
+										.status-style{class: "status-#{ticket['status']}"}
+											= ticket['status']
+									%th.time-style
+										#{Time.parse(ticket['updated_at']).strftime('%b %d')}
+									%th
+										= ticket['assignee_id']
+
+						.collapse.info-canvas{"aria-expanded" => "false", :id => "ticket_"+ticket['id'].to_s}
+							%h4
+								= ticket['subject']
+								%span.info-status-span
+									.status-style{class: "status-#{ticket['status']}"}
+										= ticket['status']
+							%p.info-header-p
+								Submitted by #{ticket['submitter_id']} 
+							%p.info-header-p
+								Created at #{Time.parse(ticket['created_at']).strftime('%b %d %H:%M')}
+							- if ticket['updated_at'] != ticket['created_at']
+								%p.info-header-p			
+									%span
+										Updated at #{Time.parse(ticket['updated_at']).strftime('%b %d %H:%M')}
+							%p.info-content-p 
+								= ticket['description']
+							- ticket['tags'].each do |tag|
+								%span.ticket-tag
+									\##{tag}
+							%span.ticket-tag
+								Group: #{ticket['group_id']}
+							%span.ticket-tag
+								Brand: #{ticket['brand_id']}
+							/ %table.span12
+							/ 	- ticket.each do |ticket_content|
+							/ 		- if ticket_content[1].present? && ticket_content[0]!= 'via'
+							/ 			%tr
+							/ 				%th
+							/ 					= ticket_content[0] + ": "
+							/ 				%td
+							/ 					= ticket_content[1]
 				%ul.pagination
 			- rescue
 				.error-msg
@@ -40,18 +88,32 @@
 				$('.subject_panel').hide();
 				$('.subject_panel').slice(0,ticketDisplayLimit).show();
 				for (var i = 1; i < pageNum + 1; i++){
-					var pageCount = '<li><a class="page-btn" page="'+i+'" href="">'+i+'</a></li>';
+					var pageCount = '<li><a class="page-btn page'+i+'" page="'+i+'" href="">'+i+'</a></li>';
 					$('.pagination').append(pageCount);        
 				}
+				var prev_page = '<li><a class="page-btn prev-btn" page="1" href=""></a></li>';
+				var next_page = '<li><a class="page-btn next-btn" page="'+pageNum+'" href=""></a></li>'
+				$('.pagination').prepend(prev_page);   
+				$('.pagination').append(next_page);  
 			}
 
 			// click page btn
 			$('.page-btn').on('click', function(e){
 				e.preventDefault();
-				var currentPageNum = $(this).attr('page');
+				var currentPageNum = parseInt($(this).attr('page'));
 
-			// display tickets according to page num
+				// set prev and next page btn
+				$('.prev-btn').attr('page', (currentPageNum - 1 > 0)? currentPageNum - 1 : 1);
+				$('.next-btn').attr('page', (currentPageNum + 1 < pageNum)? currentPageNum + 1 : pageNum);
+
+				// display active btn according to page
+				console.log($('.page'+currentPageNum));
+				$('.page-btn').removeClass('btn-active');
+				$('.page'+currentPageNum).addClass('btn-active');
+
+
+				// display tickets according to page num
 				$('.subject_panel').hide();
-				$('.subject_panel').slice((currentPageNum - 1) * ticketDisplayLimit, currentPageNum * ticketDisplayLimit).show();
+				$('.subject_panel').slice((currentPageNum - 1) * ticketDisplayLimit, currentPageNum * ticketDisplayLimit).show();		
 			});
 		});
