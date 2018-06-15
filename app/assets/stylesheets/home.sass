@@ -13,6 +13,9 @@ a
 	border: 2px dotted #E5E5E5
 	padding: 15px
 	margin-bottom: 12px
+	transition: all 0.3s ease
+	&:hover
+		border: 2px solid #d9d9d9
 th, td
 	border-bottom: 2px solid #E5E5E5
 	padding: 10px
@@ -46,11 +49,15 @@ th, td
 			-webkit-transform: rotate(0deg)
 			transform: rotate(0deg)
 			transition: all 0.3s ease-in-out
-	&:hover
-		font-size: 20px
-		color: #737373
-
+.info-canvas[aria-expanded="true"]	
+	transition: all 0.5s ease-in-out
+	display: flex
+	flex-direction: row
+	@media screen and (max-width: 500px)
+		flex-direction: column
 .info-canvas
+	transition: all 0.5s ease-in-out
+	display: none
 	padding: 20px 40px
 	h4
 		font-weight: bold
@@ -89,12 +96,10 @@ a[aria-expanded="true"]
 	width: 500px
 .id-style
 	width: 50px
-.id-style-header
-	width: 60px
 .time-style
 	width: 100px
-.assign-style-header
-	width: 160px
+.assign-style
+	width: 150px
 .status-th
 	width: 90px
 .status-style
@@ -104,6 +109,25 @@ a[aria-expanded="true"]
 	border-radius: 10px
 	color: white
 	font-size: 12px	
+.priority-style
+	width: 100px
+.priority-flag
+	&:after
+		display: inline-block
+		content: "\f024"
+		font-family: fontawesome
+		font-size: 14px
+		position: relative
+.priority-status
+	display: inline
+.priority-low
+	color: lightgrey
+.priority-normal
+	color: #bfff80
+.priority-high
+	color: #ffc266
+.priority-urgent
+	color: #ff6666
 .status-open
 	background-color: #ff6666
 .status-pending
@@ -145,3 +169,7 @@ a[aria-expanded="true"]
 		position: relative
 .btn-active
 	background-color: #E5E5E5 !important
+.span6
+	width: 50%
+	@media screen and (max-width: 500px)
+		width: 100%

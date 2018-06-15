@@ -10,14 +10,16 @@
 				%tr.panel-table
 					%th.subject-style
 						SUBJECT
-					%th.id-style-header
+					%th.id-style
 						ID
 					%th.status-th
 						STATUS
-					%th
+					%th.time-style
 						UPDATED
-					%th.assign-style-header
+					%th.assign-style
 						ASSIGNEE
+					%th.priority-style
+						PRIORITY
 			- begin
 				- @ticket_info['tickets'].each do |ticket|
 					%li.subject_panel.span12{:id => "panel_"+ticket['id'].to_s}
@@ -35,32 +37,47 @@
 											= ticket['status']
 									%th.time-style
 										#{Time.parse(ticket['updated_at']).strftime('%b %d')}
-									%th
+									%th.assign-style
 										= ticket['assignee_id']
+									- if ticket['priority'].present?
+										%th.priority-style{class: "priority-#{ticket['priority']}"}
+											%span.priority-flag 
+											= ticket['priority']
 
-						.collapse.info-canvas{"aria-expanded" => "false", :id => "ticket_"+ticket['id'].to_s}
-							%h4
-								= ticket['subject']
-								%span.info-status-span
-									.status-style{class: "status-#{ticket['status']}"}
-										= ticket['status']
-							%p.info-header-p
-								Submitted by #{ticket['submitter_id']} 
-							%p.info-header-p
-								Created at #{Time.parse(ticket['created_at']).strftime('%b %d %H:%M')}
-							- if ticket['updated_at'] != ticket['created_at']
-								%p.info-header-p			
-									%span
-										Updated at #{Time.parse(ticket['updated_at']).strftime('%b %d %H:%M')}
-							%p.info-content-p 
-								= ticket['description']
-							- ticket['tags'].each do |tag|
+						.collapse.info-canvas.span12{"aria-expanded" => "false", :id => "ticket_"+ticket['id'].to_s}
+							%div.span6
+								%h4
+									= ticket['subject']
+									/ %span.info-status-span
+									/ 	.status-style{class: "status-#{ticket['status']}"}
+									/ 		= ticket['status']
+								%p.info-header-p
+									Submitted by: 
+									= ticket['submitter_id']
+								%p.info-header-p
+									Created at: 
+									= Time.parse(ticket['created_at']).strftime('%b %d %H:%M')
+								- if ticket['priority'].present?
+									%p.info-header-p
+										Priority:
+										%div{class: "priority-status priority-#{ticket['priority']}"}
+											%span.priority-flag
+											= ticket['priority']								
+								- if ticket['updated_at'] != ticket['created_at']
+									%p.info-header-p			
+										%span
+											Updated at: 
+											= Time.parse(ticket['updated_at']).strftime('%b %d %H:%M')
+
+								- ticket['tags'].each do |tag|
+									%span.ticket-tag
+										\##{tag}
 								%span.ticket-tag
-									\##{tag}
-							%span.ticket-tag
-								Group: #{ticket['group_id']}
-							%span.ticket-tag
-								Brand: #{ticket['brand_id']}
+									Group: #{ticket['group_id']}
+								%span.ticket-tag
+									Brand: #{ticket['brand_id']}
+							%p.info-content-p.span6 
+								= ticket['description']
 							/ %table.span12
 							/ 	- ticket.each do |ticket_content|
 							/ 		- if ticket_content[1].present? && ticket_content[0]!= 'via'
@@ -115,4 +132,5 @@
 				$('.subject_panel').hide();
 				$('.subject_panel').slice((currentPageNum - 1) * ticketDisplayLimit, currentPageNum * ticketDisplayLimit).show();
 			});
+
 		});
