@@ -148,8 +148,9 @@ a[aria-expanded="true"]
 	padding: 6px
 	width: auto
 	margin-right: 5px
+	margin-bottom: 15px
 	cursor: pointer
-.info-status-span
+.inline-block
 	display: inline-block
 .prev-btn
 	&:after
@@ -173,3 +174,10 @@ a[aria-expanded="true"]
 	width: 50%
 	@media screen and (max-width: 500px)
 		width: 100%
+.mobile-show
+	display: none
+	@media screen and (max-width: 500px)
+		display: block 
+.mobile-hide
+	@media screen and (max-width: 500px)
+		display: none

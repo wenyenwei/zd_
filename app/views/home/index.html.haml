@@ -12,13 +12,13 @@
 						SUBJECT
 					%th.id-style
 						ID
-					%th.status-th
+					%th.status-th.mobile-hide
 						STATUS
-					%th.time-style
+					%th.time-style.mobile-hide
 						UPDATED
-					%th.assign-style
+					%th.assign-style.mobile-hide
 						ASSIGNEE
-					%th.priority-style
+					%th.priority-style.mobile-hide
 						PRIORITY
 			- begin
 				- @ticket_info['tickets'].each do |ticket|
@@ -32,37 +32,45 @@
 										= ticket['subject']
 									%th.id-style
 										= ticket['id']
-									%th.status-th
+									%th.status-th.mobile-hide
 										.status-style{class: "status-#{ticket['status']}"}
 											= ticket['status']
-									%th.time-style
+									%th.time-style.mobile-hide
 										#{Time.parse(ticket['updated_at']).strftime('%b %d')}
-									%th.assign-style
+									%th.assign-style.mobile-hide
 										= ticket['assignee_id']
 									- if ticket['priority'].present?
-										%th.priority-style{class: "priority-#{ticket['priority']}"}
+										%th.priority-style.mobile-hide{class: "priority-#{ticket['priority']}"}
 											%span.priority-flag 
-											= ticket['priority']
+											#{ticket['priority'][0].capitalize + ticket['priority'].slice(1..-1)}
 
 						.collapse.info-canvas.span12{"aria-expanded" => "false", :id => "ticket_"+ticket['id'].to_s}
 							%div.span6
 								%h4
 									= ticket['subject']
-									/ %span.info-status-span
+									/ %span.inline-block
 									/ 	.status-style{class: "status-#{ticket['status']}"}
 									/ 		= ticket['status']
 								%p.info-header-p
 									Submitted by: 
 									= ticket['submitter_id']
+								%p.info-header-p.mobile-show
+									Assigned To:
+									= ticket['assignee_id']
 								%p.info-header-p
 									Created at: 
 									= Time.parse(ticket['created_at']).strftime('%b %d %H:%M')
-								- if ticket['priority'].present?
+								.mobile-show
 									%p.info-header-p
+										Status:
+										.status-style{class: "status-#{ticket['status']}"}
+											= ticket['status']
+								- if ticket['priority'].present?
+									%p.info-header-p.mobile-show
 										Priority:
-										%div{class: "priority-status priority-#{ticket['priority']}"}
+										.mobile-show{class: "priority-status priority-#{ticket['priority']}"}
 											%span.priority-flag
-											= ticket['priority']								
+											#{ticket['priority'][0].capitalize + ticket['priority'].slice(1..-1)}								
 								- if ticket['updated_at'] != ticket['created_at']
 									%p.info-header-p			
 										%span
