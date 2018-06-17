@@ -10,7 +10,7 @@ class HomeController < ApplicationController
     begin
       # use faraday library for http request
       require 'faraday'
-      conn = Faraday.new(:url => "https://internchallenge.zendesk.com/api/v2/tickets.json") do |conn|
+      conn = Faraday.new(:url => zendesk_url) do |conn|
         conn.use Faraday::Response::RaiseError
         conn.use Faraday::Adapter::NetHttp
         # connect with authentication
