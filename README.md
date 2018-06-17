@@ -1,5 +1,7 @@
 # Overview
-
+Zendesk Intern Challenge. Build on rails.
+Up on heroku:
+https://boiling-garden-33930.herokuapp.com/
 
 # Setup
 
