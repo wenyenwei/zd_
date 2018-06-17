@@ -57,8 +57,10 @@ th, td
 		flex-direction: column
 .info-canvas
 	transition: all 0.5s ease-in-out
-	display: none
 	padding: 20px 40px
+	display: none
+	@media screen and (max-width: 500px)
+		padding: 0
 	h4
 		font-weight: bold
 	.info-header-p
@@ -91,17 +93,24 @@ a[aria-expanded="true"]
 .panel-table
 	th
 		border: none
-
+.subject-style-header
+	width: 34%
+	@media screen and (max-width: 1025px)
+		width: 32%
+	@media screen and (max-width: 769px)
+		width: 33%	
+	@media screen and (max-width: 500px)
+		width: 12%	
 .subject-style
-	width: 500px
+	width: 35%
 .id-style
-	width: 50px
+	width: 5%
 .time-style
-	width: 100px
+	width: 7%
 .assign-style
-	width: 150px
+	width: 10%
 .status-th
-	width: 90px
+	width: 7.5%
 .status-style
 	width: 60px
 	text-align: center
@@ -110,7 +119,9 @@ a[aria-expanded="true"]
 	color: white
 	font-size: 12px	
 .priority-style
-	width: 100px
+	width: 7%
+	@media screen and (max-width: 769px)
+		width: 9%
 .priority-flag
 	&:after
 		display: inline-block
@@ -148,8 +159,9 @@ a[aria-expanded="true"]
 	padding: 6px
 	width: auto
 	margin-right: 5px
-	margin-bottom: 15px
+	margin-bottom: 8px
 	cursor: pointer
+	display: inline-block
 .inline-block
 	display: inline-block
 .prev-btn

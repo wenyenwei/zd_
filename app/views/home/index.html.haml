@@ -1,14 +1,13 @@
 .container
 	%h1 Zendesk Intern Challenge
-	%h4 with Zendesk Tickets API
 
 	.full-width
 	.span12
 		%ul.pagination
 		#subjectPanel
-			%table.header-th 
+			%table.header-th.span12
 				%tr.panel-table
-					%th.subject-style
+					%th.subject-style-header
 						SUBJECT
 					%th.id-style
 						ID
@@ -21,6 +20,7 @@
 					%th.priority-style.mobile-hide
 						PRIORITY
 			- begin
+				/ display ticket list
 				- @ticket_info['tickets'].each do |ticket|
 					%li.subject_panel.span12{:id => "panel_"+ticket['id'].to_s}
 						%a.links{"aria-expanded" => "false", "data-toggle" => "collapse", :href => "#ticket_#{ticket['id'].to_s}"}
@@ -39,18 +39,16 @@
 										#{Time.parse(ticket['updated_at']).strftime('%b %d')}
 									%th.assign-style.mobile-hide
 										= ticket['assignee_id']
-									- if ticket['priority'].present?
-										%th.priority-style.mobile-hide{class: "priority-#{ticket['priority']}"}
+									%th.priority-style.mobile-hide{class: "priority-#{ticket['priority']}"}
+										- if ticket['priority'].present?
 											%span.priority-flag 
 											#{ticket['priority'][0].capitalize + ticket['priority'].slice(1..-1)}
 
+						/ display ticket content
 						.collapse.info-canvas.span12{"aria-expanded" => "false", :id => "ticket_"+ticket['id'].to_s}
 							%div.span6
 								%h4
 									= ticket['subject']
-									/ %span.inline-block
-									/ 	.status-style{class: "status-#{ticket['status']}"}
-									/ 		= ticket['status']
 								%p.info-header-p
 									Submitted by: 
 									= ticket['submitter_id']
@@ -86,14 +84,6 @@
 									Brand: #{ticket['brand_id']}
 							%p.info-content-p.span6 
 								= ticket['description']
-							/ %table.span12
-							/ 	- ticket.each do |ticket_content|
-							/ 		- if ticket_content[1].present? && ticket_content[0]!= 'via'
-							/ 			%tr
-							/ 				%th
-							/ 					= ticket_content[0] + ": "
-							/ 				%td
-							/ 					= ticket_content[1]
 				%ul.pagination
 			- rescue
 				.error-msg
@@ -117,8 +107,9 @@
 					var pageCount = '<li><a class="page-btn page'+i+'" page="'+i+'" href="">'+i+'</a></li>';
 					$('.pagination').append(pageCount);     
 				}
+				$('.page1').addClass('btn-active');
 				var prev_page = '<li><a class="page-btn prev-btn" page="1" href=""></a></li>';
-				var next_page = '<li><a class="page-btn next-btn" page="'+pageNum+'" href=""></a></li>'
+				var next_page = '<li><a class="page-btn next-btn" page="2" href=""></a></li>'
 				$('.pagination').prepend(prev_page);   
 				$('.pagination').append(next_page);  
 			}
@@ -140,5 +131,4 @@
 				$('.subject_panel').hide();
 				$('.subject_panel').slice((currentPageNum - 1) * ticketDisplayLimit, currentPageNum * ticketDisplayLimit).show();
 			});
-
 		});
