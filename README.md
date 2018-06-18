@@ -34,7 +34,7 @@ At this point you should be all good to go. In order to run the rails app, type 
 To do unit testing to the app, simply follow below:
 
 ## Unit tests
-These are written using rails testing. Find unit tests in the `test/controller` folder. 
+These are written using rails testing. Find unit tests in the `test` folder. For this project, simple tests are mainly done in `test/controller/home_controller_test.rb`
 
 To run unit tests, run:
 
