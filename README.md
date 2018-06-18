@@ -3,6 +3,8 @@ Zendesk Intern Challenge. Build on rails.
 Up on heroku:
 https://boiling-garden-33930.herokuapp.com/
 
+* Note: You may find the last few commits confusing, it's because heroku doesn't support sqlite3 instead it uses postgres. Thus, some of the adjustments have to be done to deploy the webapp to heroku.
+
 # Setup
 
 ## Installation on Mac OS 
@@ -16,6 +18,11 @@ Once you've got the required ruby installed, run the following commands:
 
 This should download all the required project dependencies.
 
+## Environment variables setup
+
+Copy the file `.env.example` to a new file named `.env` and fill in your zendesk authentication info accordingly (replace the whole braces).
+
+If you don't want to use your zendesk authentication info, you can simply view on heroku with my variables setup: https://boiling-garden-33930.herokuapp.com/
 
 # Running the app
 At this point you should be all good to go. In order to run the rails app, type the following:
@@ -27,8 +34,10 @@ At this point you should be all good to go. In order to run the rails app, type 
 To do unit testing to the app, simply follow below:
 
 ## Unit tests
-These are written using rails testing. Find unit tests in the `test` folder. 
+These are written using rails testing. Find unit tests in the `test/controller` folder. 
 
 To run unit tests, run:
 
 * `rake`
+
+* Note: If you didn't fill in your zendesk authentication info in step `Environment variables setup`, you will get errors in unit tests due to incomplete authentication info.
