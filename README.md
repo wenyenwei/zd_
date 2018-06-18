@@ -3,7 +3,7 @@ Zendesk Intern Challenge. Build on rails.
 Up on heroku:
 https://boiling-garden-33930.herokuapp.com/
 
-* Note: You may find the last few commits confusing, it's because heroku doesn't support sqlite3 instead it uses postgres. Thus, some of the adjustments have to be done to deploy the webapp to heroku.
+* Note: You may find the last few commits confusing, it's because heroku doesn't support sqlite3 instead it uses postgres. Thus, some of the adjustments have to be done to deploy the webapp to heroku. See https://devcenter.heroku.com/articles/sqlite3 for more info.
 
 # Setup
 
