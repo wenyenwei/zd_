@@ -20,6 +20,7 @@ gem 'turbolinks', '~> 5'
 gem 'faraday', '~> 0.9.2'
 gem 'jbuilder', '~> 2.5'
 gem 'font-awesome-rails'
+gem 'graphql'
 
 
 group :development, :test do
@@ -36,3 +37,5 @@ group :development do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'graphiql-rails', group: :development
