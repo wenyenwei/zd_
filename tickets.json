@@ -1,6 +1,8 @@
 {
   "tickets": [
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 1,
       "assignee_id": 5,
       "subject": "velit eiusmod reprehenderit officia cupidatat",
@@ -9,9 +11,14 @@
         "est",
         "nisi",
         "incididunt"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "urgent",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 2,
       "assignee_id": 8,
       "subject": "excepteur laborum ex occaecat Lorem",
@@ -20,9 +27,14 @@
         "labore",
         "voluptate",
         "amet"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "urgent",
+      "status": "solved"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 3,
       "assignee_id": 10,
       "subject": "ad sunt qui aute ullamco",
@@ -31,9 +43,14 @@
         "laborum",
         "mollit",
         "proident"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "pending"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 4,
       "assignee_id": 10,
       "subject": "aliquip mollit quis laborum incididunt",
@@ -42,9 +59,14 @@
         "consectetur",
         "mollit",
         "sit"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "urgent",
+      "status": "solved"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 5,
       "assignee_id": 10,
       "subject": "nisi aliquip ipsum nostrud amet",
@@ -53,9 +75,14 @@
         "et",
         "occaecat",
         "cillum"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "pending"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 6,
       "assignee_id": 9,
       "subject": "cillum quis nostrud labore amet",
@@ -64,9 +91,14 @@
         "Lorem",
         "ad",
         "et"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 7,
       "assignee_id": 1,
       "subject": "proident est nisi non irure",
@@ -75,9 +107,14 @@
         "sit",
         "consectetur",
         "aute"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 8,
       "assignee_id": 9,
       "subject": "veniam ea eu minim aute",
@@ -86,9 +123,14 @@
         "aute",
         "ad",
         "et"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 9,
       "assignee_id": 5,
       "subject": "magna reprehenderit nisi est cillum",
@@ -97,9 +139,14 @@
         "magna",
         "aliquip",
         "non"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 10,
       "assignee_id": 5,
       "subject": "quis veniam ad sunt non",
@@ -108,9 +155,14 @@
         "aliquip",
         "consequat",
         "magna"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 11,
       "assignee_id": 2,
       "subject": "tempor aliquip sint dolore incididunt",
@@ -119,9 +171,14 @@
         "ad",
         "non",
         "minim"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 12,
       "assignee_id": 2,
       "subject": "labore pariatur ut laboris laboris",
@@ -130,9 +187,14 @@
         "culpa",
         "dolor",
         "eiusmod"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 13,
       "assignee_id": 3,
       "subject": "officia mollit aliqua eu nostrud",
@@ -141,9 +203,14 @@
         "irure",
         "cillum",
         "fugiat"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 14,
       "assignee_id": 5,
       "subject": "do incididunt incididunt quis anim",
@@ -152,9 +219,14 @@
         "veniam",
         "exercitation",
         "officia"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 15,
       "assignee_id": 3,
       "subject": "tempor magna anim ea id",
@@ -163,9 +235,14 @@
         "reprehenderit",
         "laborum",
         "id"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 16,
       "assignee_id": 3,
       "subject": "exercitation sit incididunt magna laboris",
@@ -174,9 +251,14 @@
         "proident",
         "tempor",
         "non"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 17,
       "assignee_id": 7,
       "subject": "laborum ea ut in cupidatat",
@@ -185,9 +267,14 @@
         "commodo",
         "sunt",
         "exercitation"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 18,
       "assignee_id": 2,
       "subject": "est fugiat labore pariatur esse",
@@ -196,9 +283,14 @@
         "veniam",
         "reprehenderit",
         "dolore"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 19,
       "assignee_id": 1,
       "subject": "commodo sint laboris est et",
@@ -207,9 +299,14 @@
         "excepteur",
         "sunt",
         "ut"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 20,
       "assignee_id": 2,
       "subject": "laboris sint Lorem ex Lorem",
@@ -218,9 +315,14 @@
         "duis",
         "minim",
         "commodo"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 21,
       "assignee_id": 9,
       "subject": "esse adipisicing consectetur sunt tempor",
@@ -229,9 +331,14 @@
         "nulla",
         "occaecat",
         "consectetur"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 22,
       "assignee_id": 6,
       "subject": "sunt enim pariatur id id",
@@ -240,9 +347,14 @@
         "eu",
         "pariatur",
         "tempor"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 23,
       "assignee_id": 10,
       "subject": "et ad ut enim labore",
@@ -251,9 +363,14 @@
         "dolor",
         "officia",
         "aliqua"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 24,
       "assignee_id": 1,
       "subject": "voluptate dolor deserunt ea deserunt",
@@ -262,9 +379,14 @@
         "est",
         "labore",
         "do"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 25,
       "assignee_id": 8,
       "subject": "in labore quis mollit mollit",
@@ -273,9 +395,14 @@
         "amet",
         "aliquip",
         "sint"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 26,
       "assignee_id": 3,
       "subject": "ut magna eiusmod magna nostrud",
@@ -284,9 +411,14 @@
         "elit",
         "sint",
         "voluptate"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 27,
       "assignee_id": 6,
       "subject": "magna consequat ut ullamco magna",
@@ -295,9 +427,14 @@
         "quis",
         "pariatur",
         "elit"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 28,
       "assignee_id": 3,
       "subject": "irure pariatur aliquip dolore esse",
@@ -306,9 +443,14 @@
         "fugiat",
         "labore",
         "eiusmod"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 29,
       "assignee_id": 9,
       "subject": "officia esse nostrud est exercitation",
@@ -317,9 +459,14 @@
         "cupidatat",
         "excepteur",
         "velit"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 30,
       "assignee_id": 1,
       "subject": "aute ipsum sint exercitation labore",
@@ -328,9 +475,14 @@
         "eiusmod",
         "irure",
         "sint"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 31,
       "assignee_id": 10,
       "subject": "velit irure elit incididunt non",
@@ -339,9 +491,14 @@
         "consequat",
         "cupidatat",
         "occaecat"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 32,
       "assignee_id": 8,
       "subject": "fugiat non aliqua irure aliquip",
@@ -350,9 +507,14 @@
         "mollit",
         "est",
         "nostrud"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 33,
       "assignee_id": 2,
       "subject": "proident esse ut velit labore",
@@ -361,9 +523,14 @@
         "quis",
         "sint",
         "dolor"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 34,
       "assignee_id": 4,
       "subject": "laboris et proident qui enim",
@@ -372,9 +539,14 @@
         "officia",
         "laboris",
         "pariatur"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 35,
       "assignee_id": 3,
       "subject": "in id consequat dolore enim",
@@ -383,9 +555,14 @@
         "fugiat",
         "occaecat",
         "non"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 36,
       "assignee_id": 7,
       "subject": "enim duis deserunt ipsum ad",
@@ -394,9 +571,14 @@
         "ad",
         "duis",
         "nulla"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 37,
       "assignee_id": 10,
       "subject": "ipsum ex id minim eu",
@@ -405,9 +587,14 @@
         "qui",
         "tempor",
         "labore"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 38,
       "assignee_id": 3,
       "subject": "incididunt mollit pariatur esse esse",
@@ -416,9 +603,14 @@
         "elit",
         "mollit",
         "ex"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 39,
       "assignee_id": 1,
       "subject": "sit pariatur nisi reprehenderit sit",
@@ -427,9 +619,14 @@
         "amet",
         "anim",
         "cupidatat"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 40,
       "assignee_id": 3,
       "subject": "amet ipsum amet laborum sit",
@@ -438,9 +635,14 @@
         "nulla",
         "eu",
         "reprehenderit"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 41,
       "assignee_id": 1,
       "subject": "ut anim tempor voluptate deserunt",
@@ -449,9 +651,14 @@
         "duis",
         "dolore",
         "Lorem"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 42,
       "assignee_id": 9,
       "subject": "eu id magna aute occaecat",
@@ -460,9 +667,14 @@
         "sunt",
         "adipisicing",
         "ad"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 43,
       "assignee_id": 3,
       "subject": "velit in sit deserunt id",
@@ -471,9 +683,14 @@
         "incididunt",
         "pariatur",
         "anim"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 44,
       "assignee_id": 10,
       "subject": "proident esse laboris officia pariatur",
@@ -482,9 +699,14 @@
         "id",
         "ullamco",
         "do"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 45,
       "assignee_id": 9,
       "subject": "irure esse irure qui dolore",
@@ -493,9 +715,14 @@
         "qui",
         "mollit",
         "fugiat"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 46,
       "assignee_id": 10,
       "subject": "officia voluptate sit sunt pariatur",
@@ -504,9 +731,14 @@
         "nostrud",
         "pariatur",
         "reprehenderit"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 47,
       "assignee_id": 7,
       "subject": "sunt dolore excepteur laborum magna",
@@ -515,9 +747,14 @@
         "eiusmod",
         "ut",
         "officia"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 48,
       "assignee_id": 10,
       "subject": "qui voluptate culpa do tempor",
@@ -526,9 +763,14 @@
         "dolor",
         "amet",
         "magna"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 49,
       "assignee_id": 3,
       "subject": "officia magna velit nostrud ullamco",
@@ -537,9 +779,14 @@
         "Lorem",
         "mollit",
         "sint"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 50,
       "assignee_id": 4,
       "subject": "esse ut qui do aute",
@@ -548,9 +795,14 @@
         "do",
         "laborum",
         "ex"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 51,
       "assignee_id": 1,
       "subject": "fugiat sunt do incididunt enim",
@@ -559,9 +811,14 @@
         "exercitation",
         "ea",
         "et"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 52,
       "assignee_id": 8,
       "subject": "reprehenderit id non aliqua enim",
@@ -570,9 +827,14 @@
         "ex",
         "culpa",
         "non"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 53,
       "assignee_id": 2,
       "subject": "sint excepteur mollit excepteur aliqua",
@@ -581,9 +843,14 @@
         "incididunt",
         "deserunt",
         "tempor"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 54,
       "assignee_id": 1,
       "subject": "voluptate proident voluptate incididunt culpa",
@@ -592,9 +859,14 @@
         "consequat",
         "ea",
         "magna"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 55,
       "assignee_id": 3,
       "subject": "aliqua sit quis cupidatat nisi",
@@ -603,9 +875,14 @@
         "ea",
         "sint",
         "eiusmod"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 56,
       "assignee_id": 4,
       "subject": "et veniam ullamco consequat amet",
@@ -614,9 +891,14 @@
         "sit",
         "laborum",
         "ea"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 57,
       "assignee_id": 3,
       "subject": "excepteur Lorem anim adipisicing deserunt",
@@ -625,9 +907,14 @@
         "ipsum",
         "veniam",
         "cupidatat"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 58,
       "assignee_id": 5,
       "subject": "mollit tempor fugiat incididunt aliqua",
@@ -636,9 +923,14 @@
         "nulla",
         "duis",
         "enim"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 59,
       "assignee_id": 3,
       "subject": "cillum cillum mollit et deserunt",
@@ -647,9 +939,14 @@
         "enim",
         "reprehenderit",
         "laboris"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 60,
       "assignee_id": 3,
       "subject": "nulla adipisicing occaecat mollit voluptate",
@@ -658,9 +955,14 @@
         "consectetur",
         "mollit",
         "duis"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 61,
       "assignee_id": 2,
       "subject": "quis nulla minim labore aliquip",
@@ -669,9 +971,14 @@
         "deserunt",
         "labore",
         "ipsum"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 62,
       "assignee_id": 3,
       "subject": "laboris eu laborum aute fugiat",
@@ -680,9 +987,14 @@
         "in",
         "cupidatat",
         "reprehenderit"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 63,
       "assignee_id": 9,
       "subject": "voluptate aliquip occaecat deserunt ad",
@@ -691,9 +1003,14 @@
         "consectetur",
         "cillum",
         "ut"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 64,
       "assignee_id": 6,
       "subject": "velit minim adipisicing magna esse",
@@ -702,9 +1019,14 @@
         "ullamco",
         "magna",
         "amet"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 65,
       "assignee_id": 4,
       "subject": "tempor laborum qui voluptate nulla",
@@ -713,9 +1035,14 @@
         "ipsum",
         "magna",
         "do"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 66,
       "assignee_id": 8,
       "subject": "adipisicing officia reprehenderit id fugiat",
@@ -724,9 +1051,14 @@
         "laborum",
         "duis",
         "qui"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 67,
       "assignee_id": 5,
       "subject": "id ipsum ex deserunt esse",
@@ -735,9 +1067,14 @@
         "nulla",
         "nulla",
         "anim"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 68,
       "assignee_id": 7,
       "subject": "adipisicing exercitation ex nostrud ipsum",
@@ -746,9 +1083,14 @@
         "irure",
         "cillum",
         "occaecat"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 69,
       "assignee_id": 2,
       "subject": "magna aliqua occaecat culpa velit",
@@ -757,9 +1099,14 @@
         "incididunt",
         "incididunt",
         "anim"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 70,
       "assignee_id": 6,
       "subject": "non enim adipisicing veniam ullamco",
@@ -768,9 +1115,14 @@
         "dolor",
         "laboris",
         "cillum"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 71,
       "assignee_id": 10,
       "subject": "quis non laborum sint non",
@@ -779,9 +1131,14 @@
         "velit",
         "adipisicing",
         "voluptate"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 72,
       "assignee_id": 6,
       "subject": "aliqua minim Lorem proident eiusmod",
@@ -790,9 +1147,14 @@
         "ex",
         "tempor",
         "qui"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 73,
       "assignee_id": 10,
       "subject": "duis dolore est esse et",
@@ -801,9 +1163,14 @@
         "ex",
         "amet",
         "quis"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 74,
       "assignee_id": 10,
       "subject": "deserunt excepteur anim Lorem nisi",
@@ -812,9 +1179,14 @@
         "tempor",
         "fugiat",
         "officia"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 75,
       "assignee_id": 10,
       "subject": "commodo excepteur cupidatat aliquip quis",
@@ -823,9 +1195,14 @@
         "incididunt",
         "occaecat",
         "aute"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 76,
       "assignee_id": 6,
       "subject": "Lorem aliqua id nisi minim",
@@ -834,9 +1211,14 @@
         "cillum",
         "ullamco",
         "ad"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 77,
       "assignee_id": 8,
       "subject": "nulla id excepteur amet deserunt",
@@ -845,9 +1227,14 @@
         "duis",
         "dolore",
         "voluptate"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 78,
       "assignee_id": 8,
       "subject": "ad reprehenderit magna ipsum irure",
@@ -856,9 +1243,14 @@
         "fugiat",
         "labore",
         "sunt"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 79,
       "assignee_id": 6,
       "subject": "qui laboris nostrud non sit",
@@ -867,9 +1259,14 @@
         "do",
         "culpa",
         "reprehenderit"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 80,
       "assignee_id": 9,
       "subject": "deserunt do magna occaecat id",
@@ -878,9 +1275,14 @@
         "ipsum",
         "velit",
         "magna"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 81,
       "assignee_id": 8,
       "subject": "dolore adipisicing fugiat ex tempor",
@@ -889,9 +1291,14 @@
         "tempor",
         "voluptate",
         "enim"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 82,
       "assignee_id": 2,
       "subject": "anim Lorem reprehenderit Lorem esse",
@@ -900,9 +1307,14 @@
         "exercitation",
         "amet",
         "aute"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 83,
       "assignee_id": 5,
       "subject": "enim fugiat ad veniam est",
@@ -911,9 +1323,14 @@
         "irure",
         "ex",
         "consectetur"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 84,
       "assignee_id": 4,
       "subject": "veniam ullamco enim ea do",
@@ -922,9 +1339,14 @@
         "in",
         "velit",
         "dolore"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 85,
       "assignee_id": 2,
       "subject": "do excepteur magna duis consequat",
@@ -933,9 +1355,14 @@
         "Lorem",
         "elit",
         "proident"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 86,
       "assignee_id": 6,
       "subject": "non pariatur nisi ad est",
@@ -944,9 +1371,14 @@
         "eu",
         "ea",
         "excepteur"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 87,
       "assignee_id": 10,
       "subject": "eiusmod tempor dolore adipisicing est",
@@ -955,9 +1387,14 @@
         "occaecat",
         "enim",
         "proident"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 88,
       "assignee_id": 3,
       "subject": "quis minim quis eiusmod qui",
@@ -966,9 +1403,14 @@
         "aliqua",
         "consequat",
         "est"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 89,
       "assignee_id": 7,
       "subject": "duis fugiat excepteur sit do",
@@ -977,9 +1419,14 @@
         "mollit",
         "deserunt",
         "qui"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 90,
       "assignee_id": 8,
       "subject": "non nostrud anim cillum sit",
@@ -988,9 +1435,14 @@
         "eiusmod",
         "irure",
         "eiusmod"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 91,
       "assignee_id": 1,
       "subject": "officia sunt aliquip duis nisi",
@@ -999,9 +1451,14 @@
         "in",
         "aliqua",
         "qui"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 92,
       "assignee_id": 2,
       "subject": "ut amet eiusmod cupidatat est",
@@ -1010,9 +1467,14 @@
         "ex",
         "minim",
         "culpa"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 93,
       "assignee_id": 7,
       "subject": "duis excepteur cillum pariatur Lorem",
@@ -1021,9 +1483,14 @@
         "eu",
         "ut",
         "deserunt"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 94,
       "assignee_id": 7,
       "subject": "ex cillum cillum proident commodo",
@@ -1032,9 +1499,14 @@
         "consectetur",
         "reprehenderit",
         "consequat"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 95,
       "assignee_id": 10,
       "subject": "eiusmod eu esse ex incididunt",
@@ -1043,9 +1515,14 @@
         "excepteur",
         "mollit",
         "exercitation"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 96,
       "assignee_id": 2,
       "subject": "excepteur consequat reprehenderit labore dolor",
@@ -1054,9 +1531,14 @@
         "magna",
         "velit",
         "ea"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 97,
       "assignee_id": 1,
       "subject": "cillum commodo nulla laborum nostrud",
@@ -1065,9 +1547,14 @@
         "fugiat",
         "do",
         "irure"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 98,
       "assignee_id": 5,
       "subject": "elit sit laborum commodo laborum",
@@ -1076,9 +1563,14 @@
         "fugiat",
         "nisi",
         "reprehenderit"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 99,
       "assignee_id": 6,
       "subject": "adipisicing duis quis consequat velit",
@@ -1087,9 +1579,14 @@
         "fugiat",
         "mollit",
         "quis"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     },
     {
+      "group_id": "A28407",
+      "brand_id": "E63268",
       "requester_id": 100,
       "assignee_id": 3,
       "subject": "in nostrud occaecat consectetur aliquip",
@@ -1098,7 +1595,13 @@
         "deserunt",
         "est",
         "enim"
-      ]
+      ],
+      "created_at": "2018-06-29",
+      "priority": "normal",
+      "status": "open"
     }
-  ]
+  ],
+"created_at": "2018-06-29",
+"priority": "normal",
+"status": "pending"
 }
