@@ -5,6 +5,9 @@ class HomeController < ApplicationController
     request_tickets
   end
 
+  def show
+  end
+
   private
 
   # def request_tickets(zendesk_url, zendesk_uid, zendesk_pwd)

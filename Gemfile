@@ -21,6 +21,8 @@ gem 'faraday', '~> 0.9.2'
 gem 'jbuilder', '~> 2.5'
 gem 'font-awesome-rails'
 gem 'graphql'
+gem 'webpacker'
+gem 'react-rails'
 
 
 group :development, :test do
