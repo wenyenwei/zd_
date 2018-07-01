@@ -9,6 +9,7 @@ import TicketList from './TicketList'
 
 class Tickets extends React.Component {
   render () {
+  	
   	const cache = new InMemoryCache()
   	const client = new ApolloClient({
   		link: new HttpLink(),

@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import gql from 'graphql-tag'
+import { graphql } from 'react-apollo'
 
 class TicketList extends Component {
 	render(){
@@ -11,4 +13,16 @@ class TicketList extends Component {
 	}
 }
 
-export default TicketList
+const query = gql`
+	{
+		tickets{
+			title
+			id
+			status
+			assignee
+			priority			
+		}
+	}
+`
+
+export default graphql(query)(TicketList)
