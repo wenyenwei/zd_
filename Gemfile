@@ -24,6 +24,7 @@ gem 'graphql'
 gem 'webpacker'
 gem 'react-rails'
 gem 'mongo', '~> 2.2', '>= 2.2.5'
+gem 'mongoid', '~> 7.0'
 
 
 group :development, :test do
