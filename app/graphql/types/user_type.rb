@@ -4,14 +4,12 @@ Types::UserType = GraphQL::ObjectType.define do
   field :username, !types.String
   field :requestedTickets, types[Types::TicketType] do
     resolve -> (obj, args, ctx) {
-    	puts 'requestedTickets data', obj+'; '+args+'; '+ctx 
-    	Tickets.find({ requesterId: obj.id })
+    	Ticket.find({ requesterId: obj.id })
     }
   end
   field :assignedTickets, types[Types::TicketType] do
   	resolve -> (obj, args, ctx) {
-  		puts 'assignedTickets data', obj+'; '+args+'; '+ctx 
-  		Assignees.find({ assigneeId: obj.id })
+  		Ticket.find({ assigneeId: obj.id })
   	}
   end
 end

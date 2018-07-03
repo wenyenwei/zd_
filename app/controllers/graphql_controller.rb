@@ -1,5 +1,4 @@
 class GraphqlController < ApplicationController
-  before_action: access_mongodb
 
   def execute
     variables = ensure_hash(params[:variables])
@@ -31,14 +30,6 @@ class GraphqlController < ApplicationController
     else
       raise ArgumentError, "Unexpected parameter: #{ambiguous_param}"
     end
-  end
-
-  def access_mongodb
-    require 'mongo'
-
-    client = Mongo::Client.new('mongodb://#{ENV["MONGODB_USERNAME"]}:#{ENV["MONGODB_PASSWORD"]}@ds125211.mlab.com:25211/tickets')
-    collection = client[:ticket_lists]
-
   end
 
 end

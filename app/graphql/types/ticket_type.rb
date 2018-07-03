@@ -7,14 +7,12 @@ Types::TicketType = GraphQL::ObjectType.define do
   field :status, types.String
   field :requester, Types::UserType do
     resolve -> (obj, args, ctx) {
-    	puts 'requester data', obj+'; '+args+'; '+ctx 
-      Requesters.findById(obj.requesterId)
+      User.findById(obj.requester)
     }
   end
   field :assignee, Types::UserType do
   	resolve -> (obj, args, ctx) {
-  		puts 'assignee data', obj+'; '+args+'; '+ctx 
-  		Assignees.findById(obj.assigneeId)
+  		User.findById(obj.assignee)
   	}
   end
 end

@@ -3,9 +3,9 @@ class Types::QueryType < Types::BaseObject
   # They will be entry points for queries on your schema.
 
   # TODO: remove me
-  field :test_field, String, null: false,
-    description: "An example field added by the generator"
-  def test_field
-    "Hello World!"
+  field :ticket, TicketType, null: false,
+    description: "query ticket by id"
+  def ticket
+    Ticket.first
   end
 end

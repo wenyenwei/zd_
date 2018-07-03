@@ -9,7 +9,7 @@ development:
       # Provides the hosts the default client can connect to. Must be an array
       # of host:port pairs. (required)
       hosts:
-        - ds125211.mlab.com:25211/tickets
+        - ds125211.mlab.com:25211
       options:
         # Note that all options listed below are Ruby driver client options (the mongo gem).
         # Please refer to the driver documentation of the version of the mongo gem you are using
@@ -28,10 +28,10 @@ development:
         #     - use: web
 
         # The name of the user for authentication.
-        user: '#{ENV["MONGODB_USERNAME"]}'
+        user: "hiitsherby"
 
         # The password of the user for authentication.
-        password: '#{ENV["MONGODB_PASSWORD"]}'
+        password: "WenYen0u0"
 
         # The user's database roles.
         # roles:

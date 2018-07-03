@@ -1,4 +1,7 @@
 class ZdApiSchema < GraphQL::Schema
-  mutation(Types::MutationType)
   query(Types::QueryType)
+  mutation(Types::MutationType)
+
+  # ticket(Types::Ticket)
+  # user(Types::UserType)
 end
