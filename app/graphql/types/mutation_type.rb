@@ -10,6 +10,8 @@ Types::MutationType = GraphQL::ObjectType.define do
   name 'Mutation'
 
   field :addTicket, function: Resolvers::AddTicket.new
+  field :editTicket, function: Resolvers::EditTicket.new
+  field :deleteTicket, function: Resolvers::DeleteTicket.new
 end
 # class Types::MutationType < Types::BaseObject
 #   name 'Mutation'
