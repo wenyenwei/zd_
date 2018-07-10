@@ -13,7 +13,7 @@ client
   .query({
     query: gql`
       {
-        findTicket(id: "5b3b709d875037d3b22efd57") {
+        allTicket{
           id
           title
           content
@@ -23,30 +23,41 @@ client
   })
   .then(result => console.log(result))
 
-const ADD_TICKET = gql`
-      mutation addTicket($title: String!, $content: String!) {
-        addTicket(title: $title, content: $content) {
-          id
-          title
-          content
-        }
-      }
-    `
+const ALL_TICKET = gql`
+  {
+    allTicket{
+      id
+      title
+      content    
+    }
+  }
+`
 
-const TicketData = ({ title, content }) => (
+// const ADD_TICKET = gql`
+//       mutation addTicket($title: String!, $content: String!) {
+//         addTicket(title: $title, content: $content) {
+//           id
+//           title
+//           content
+//         }
+//       }
+//     `
+
+const TicketData = () => (
   <Query
-    query={ ADD_TICKET }
+    query={ ALL_TICKET }
     variables={{ title, content }}
   >
     {({ loading, error, data }) => {
       if (loading) return <p>Loading...</p>;
       if (error) return <p>Error :(</p>;
-      const response = data.findTicket
-      return (
-        <div key={response.id}>
-          <p>{`${response.title}: ${response.content}`}</p>
-        </div>
-      )
+      return data.allTicket.map(ticket => {
+        return (
+          <div key={ticket.id}>
+            <p>{`${ticket.title}: ${ticket.content}`}</p>
+          </div>
+        )
+      })
     }}
   </Query>
 )
