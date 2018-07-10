@@ -41,3 +41,8 @@ To run unit tests, run:
 * `rake`
 
 * Note: If you didn't fill in your zendesk authentication info in step `Environment variables setup`, you will get errors in unit tests due to incomplete authentication info.
+
+# Import Dataset
+To import dataset through command to the app, simply follow below:
+
+* `mongoimport --host=example.mlab.com:00000 -u my_username -p my_password --db example_db --collection example_collection --file example_file.json --jsonArray`

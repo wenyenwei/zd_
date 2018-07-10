@@ -1,9 +1,9 @@
 class Ticket
   include Mongoid::Document
-  field :title, type: String
-  field :content, type: String
+  field :subject, type: String
+  field :description, type: String
   field :priority, type: String
   field :status, type: String
-  field :requester, type: String
-  field :assignee, type: String
+  field :requester_id, type: String
+  field :assignee_id, type: String
 end

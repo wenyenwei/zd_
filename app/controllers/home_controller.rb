@@ -37,12 +37,21 @@ class HomeController < ApplicationController
 
   def request_tickets
     begin
-      file_name = './tickets.json'
-      classes_copy_file = File.read(file_name)
-      @ticket_info = JSON.parse(classes_copy_file) 
+      # file_name = './tickets.json'
+      # classes_copy_file = File.read(file_name)
+      # @ticket_info = JSON.parse(classes_copy_file) 
+      @ticket_info = Ticket.all
     rescue StandardError => ex
       @error_message = ex.message
     end
   end
+
+  def delete_ticket
+    begin
+      Ticket.where(_id: params[:id]).delete
+    rescue StandardError => ex
+      # re-write to flash
+      puts ex.message
+    end
 
 end

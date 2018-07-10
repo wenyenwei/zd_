@@ -1,5 +1,5 @@
 class User
   include Mongoid::Document
-  field :id, type: String
+  field :uid, type: Integer
   field :username, type: String
 end
