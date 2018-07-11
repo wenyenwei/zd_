@@ -3,6 +3,31 @@ class HomeController < ApplicationController
   def index
     # request_tickets(ENV['ZENDESK_DOMAINNAME_URL'], ENV['ZENDESK_USERNAME'], ENV['ZENDESK_PASSWORD'])
     request_tickets
+    flash[:success] = "You have successfully deleted 1 ticket."
+
+  end
+
+  def delete_ticket
+    begin
+      Ticket.where(_id: params[:ticket_id]).delete
+      # show ticket deleted flash
+      flash[:success] = "You have successfully deleted 1 ticket."
+      redirect_to root_path
+    rescue StandardError => ex
+      # re-write to flash
+      flash[:danger] = ex.message
+      puts ex.message
+    end
+  end
+
+  def edit_ticket
+    begin
+      @ticket_id = params[:ticket_id].to_s
+    rescue StandardError => ex
+      # re-write to flash
+      flash[:danger] = ex.message
+      puts ex.message
+    end
   end
 
   def show
@@ -46,12 +71,6 @@ class HomeController < ApplicationController
     end
   end
 
-  def delete_ticket
-    begin
-      Ticket.where(_id: params[:id]).delete
-    rescue StandardError => ex
-      # re-write to flash
-      puts ex.message
-    end
+
 
 end

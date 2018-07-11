@@ -1,8 +1,8 @@
 {
-  "application.js": "/packs/application-d40cda18cc9cf2d26959.js",
-  "application.js.map": "/packs/application-d40cda18cc9cf2d26959.js.map",
+  "application.js": "/packs/application-03796f8c483841d231d6.js",
+  "application.js.map": "/packs/application-03796f8c483841d231d6.js.map",
   "hello_react.js": "/packs/hello_react-e011c32c04770116022d.js",
   "hello_react.js.map": "/packs/hello_react-e011c32c04770116022d.js.map",
-  "server_rendering.js": "/packs/server_rendering-dc614102abdfa75d24ee.js",
-  "server_rendering.js.map": "/packs/server_rendering-dc614102abdfa75d24ee.js.map"
+  "server_rendering.js": "/packs/server_rendering-2ff632bfebba1964cb3f.js",
+  "server_rendering.js.map": "/packs/server_rendering-2ff632bfebba1964cb3f.js.map"
 }

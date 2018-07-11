@@ -1,0 +1,6 @@
+- flash.each do |key, value|
+  - next if value.blank?
+  .alert.alert-dismissible.fade.in{role: 'alert', class: "alert-#{key}"}
+    %button.close{type: 'button', 'data-dismiss' => 'alert', 'aria-label' => 'Close'}
+      %span{'aria-hidden' => 'true'} &times;
+    = value

@@ -38,6 +38,18 @@ const ALL_TICKET = gql`
   }
 `
 
+const FIND_TICKET = gql`
+  query findTicket($ticket_id: ID!) {
+    findTicket(id: $ticket_id) {
+      id
+      subject
+      description 
+      status
+      priority
+    }
+  }
+`;
+
 // const ADD_TICKET = gql`
 //       mutation addTicket($title: String!, $content: String!) {
 //         addTicket(title: $title, content: $content) {
@@ -48,14 +60,16 @@ const ALL_TICKET = gql`
 //       }
 //     `
 
-const TicketData = () => (
+const TicketData = ({ticket_id}) => (
   <Query
-    query={ ALL_TICKET }
+    query = { FIND_TICKET }
+    variables = { { ticket_id } }
   >
     {({ loading, error, data }) => {
       if (loading) return <p>Loading...</p>;
       if (error) return <p>Error :(</p>;
-      return data.allTicket.map(ticket => {
+        console.log('data', data)
+      const ticket = data.findTicket;
         return (
           <ListGroupItem key={ticket.id}>
             <Table>
@@ -68,13 +82,13 @@ const TicketData = () => (
             </Table>
           </ListGroupItem>
         )
-      })
     }}
   </Query>
 )
 
 class Tickets extends React.Component {
   render () {
+    console.log(this.props)
     return (
       <ApolloProvider client={client}>
         <React.Fragment>
@@ -83,7 +97,9 @@ class Tickets extends React.Component {
              <div>
                <h4>test title</h4>
                <ListGroup>
-                 <TicketData/>
+                 <TicketData
+                  ticket_id = {this.props.ticket_id}
+                 />
                </ListGroup>
              </div>
             </Row>

@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   post "/graphql", to: "graphql#execute"
   root "home#index"
   match "/tickets", to: "home#show", via: [:get]
+  match "/tickets/edit/:ticket_id", to: "home#edit_ticket", via: [:get]
+  match "/tickets/delete/:ticket_id", to: "home#delete_ticket", via: [:get]
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

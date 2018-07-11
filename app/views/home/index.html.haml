@@ -2,6 +2,7 @@
 	%h1 Mock Up CRM Tickets 
 
 	.full-width
+	= render partial: 'flash_messages'
 	.span12
 		.row
 			.span6
@@ -35,7 +36,7 @@
 
 										= ticket['subject']
 									%th.id-style
-										= index
+										= ticket['id']
 									%th.status-th.mobile-hide
 										.status-style{class: "status-#{ticket['status']}"}
 											= ticket['status']
@@ -89,8 +90,8 @@
 							.span6 	
 								%p.info-content-p
 									= ticket['description']
-								%button.btn.btn-danger.float-right Delete Ticket
-								%button.btn.btn-warning.float-right Edit Ticket
+								%a{href: "/tickets/delete/#{ticket['id']}", class: "btn btn-danger float-right"} Delete Ticket
+								%a{href: "/tickets/edit/#{ticket['id']}", class: "btn btn-warning float-right"} Edit Ticket
 
 				%ul.pagination
 			- rescue => e
