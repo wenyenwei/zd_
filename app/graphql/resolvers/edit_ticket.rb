@@ -1,12 +1,12 @@
 class Resolvers::EditTicket < GraphQL::Function
   # arguments passed as "args"
   argument :id, !types.ID
-  argument :title, types.String
-  argument :content, types.String
+  argument :subject, types.String
+  argument :description, types.String
   argument :priority, types.String
   argument :status, types.String
-  argument :requester, types.ID
-  argument :assignee, types.ID
+  argument :requester_id, types.ID
+  argument :assignee_id, types.ID
 
 
   # return type from the mutation
@@ -17,6 +17,13 @@ class Resolvers::EditTicket < GraphQL::Function
   # args - are the arguments passed
   # _ctx - is the GraphQL context (which would be discussed later)
   def call(_obj, args, _ctx)
-  	Ticket.where(_id: args[:id]).update_attributes(args)
+  	Ticket.where(_id: args[:id]).update(      
+      subject: args[:subject],
+      description: args[:description],
+      priority: args[:priority],
+      status: args[:status],
+      requester_id: args[:requester_id],
+      requester_id: args[:requester_id]
+    )
   end
 end

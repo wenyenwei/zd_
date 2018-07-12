@@ -3,7 +3,6 @@ class HomeController < ApplicationController
   def index
     # request_tickets(ENV['ZENDESK_DOMAINNAME_URL'], ENV['ZENDESK_USERNAME'], ENV['ZENDESK_PASSWORD'])
     request_tickets
-    flash[:success] = "You have successfully deleted 1 ticket."
 
   end
 
@@ -23,6 +22,7 @@ class HomeController < ApplicationController
   def edit_ticket
     begin
       @ticket_id = params[:ticket_id].to_s
+      render 'edit_ticket'
     rescue StandardError => ex
       # re-write to flash
       flash[:danger] = ex.message
