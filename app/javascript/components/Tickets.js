@@ -1,9 +1,12 @@
-import React from "react"
-import PropTypes from "prop-types"
-import ApolloClient from "apollo-boost"
-import { ApolloProvider, Query } from "react-apollo"
-import gql from "graphql-tag"
+import React from 'react'
+import PropTypes from 'prop-types'
+import ApolloClient from 'apollo-boost'
+import { ApolloProvider, Query } from 'react-apollo'
+import gql from 'graphql-tag'
 import { Grid, Row, ListGroup, ListGroupItem, Table } from 'react-bootstrap'
+import 'babel-polyfill'
+
+
 
 
 const client = new ApolloClient({
@@ -101,8 +104,8 @@ const TicketData = ({ticket_id}) => (
               {ticket_form_item}
               <button
                 className="btn btn-success float-right"
-                onClick={async () => {
-                  await client.mutation({
+                onClick={() => {
+                   client.mutation({
                     mutation: EDIT_TICKET,
                     variables: { 
                       subject: this.state.subject,
