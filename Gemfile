@@ -21,6 +21,7 @@ gem 'faraday', '~> 0.9.2'
 gem 'jbuilder', '~> 2.5'
 gem 'font-awesome-rails'
 gem 'graphql'
+gem 'devise', '~> 4.5'
 
 
 group :development, :test do
