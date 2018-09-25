@@ -28,13 +28,13 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Link</a></li>
-            
+             <li><%= link_to "View Bookings", bookings_path %></li>
+            <li><%= link_to "Add Bookings", new_booking_path %></li>
           </ul>
           
           <ul class="nav navbar-nav navbar-right">
             <%- if user_signed_in? %>
+              <li><a><%= "Welcome "+current_user.name+"!" %></a></li>
               <li><%= link_to "Edit Account", edit_user_registration_path %></li>
               <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
             <% else %>
