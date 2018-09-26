@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  num_of_boxes: 1
+  destination_address: MyString
+  pickup_address: MyString
+  departure_date: 2018-09-26 14:57:42
+  arrival_date: 2018-09-26 14:57:42
+  message: MyString
+  user_email: MyString
+
+two:
+  num_of_boxes: 1
+  destination_address: MyString
+  pickup_address: MyString
+  departure_date: 2018-09-26 14:57:42
+  arrival_date: 2018-09-26 14:57:42
+  message: MyString
+  user_email: MyString

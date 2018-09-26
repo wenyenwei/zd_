@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Num of boxes:
+  = @booking.num_of_boxes
+%p
+  %b Destination address:
+  = @booking.destination_address
+%p
+  %b Pickup address:
+  = @booking.pickup_address
+%p
+  %b Departure date:
+  = @booking.departure_date
+%p
+  %b Arrival date:
+  = @booking.arrival_date
+%p
+  %b Message:
+  = @booking.message
+%p
+  %b User email:
+  = @booking.user_email
+
+= link_to 'Edit', edit_booking_path(@booking)
+\|
+= link_to 'Back', bookings_path
