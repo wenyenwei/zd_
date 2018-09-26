@@ -1,0 +1,43 @@
+%p#notice= notice
+
+%p
+  %b Num of boxes:
+  = @customer_booking.num_of_boxes
+%p
+  %b Destination address:
+  = @customer_booking.destination_address
+%p
+  %b Pickup address:
+  = @customer_booking.pickup_address
+%p
+  %b Departure date:
+  = @customer_booking.departure_date
+%p
+  %b Arrival date:
+  = @customer_booking.arrival_date
+%p
+  %b Message:
+  = @customer_booking.message
+- if current_user.email == 'susanto@mail.com'
+  %p
+    %b User email:
+    = @customer_booking.user_email
+  %p
+    %b Status:
+    = @customer_booking.status
+  %p
+    %b Pickup datetime:
+    = @customer_booking.pickup_datetime
+  %p
+    %b Cost:
+    = @customer_booking.cost
+  %p
+    %b Hbl number:
+    = @customer_booking.HBL_number
+  %p
+    %b Message to customer:
+    = @customer_booking.message_to_customer
+
+  = link_to 'Edit', edit_customer_booking_path(@customer_booking)
+  \|
+= link_to 'Back', customer_bookings_path

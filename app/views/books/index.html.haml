@@ -9,7 +9,7 @@
       %th Departure date
       %th Arrival date
       %th Message
-      - if current_user.email == 'susanto@mail.com'
+      - if current_user.email == 'susanto@mail.com' || current_user.email == 'brother@mail.com'
         %th User email
       %th
       %th
@@ -17,7 +17,7 @@
 
   %tbody
     - @books.each do |book|
-      - if book.user_email == current_user.email || current_user.email == 'susanto@mail.com'
+      - if book.user_email == current_user.email || current_user.email == 'susanto@mail.com' || current_user.email == 'brother@mail.com'
         %tr
           %td= book.num_of_boxes
           %td= book.destination_address
@@ -25,7 +25,7 @@
           %td= book.departure_date
           %td= book.arrival_date
           %td= book.message
-          - if current_user.email == 'susanto@mail.com'
+          - if current_user.email == 'susanto@mail.com' || current_user.email == 'brother@mail.com'
             %td= book.user_email
           %td= link_to 'Show', book
           - if current_user.email == 'susanto@mail.com'

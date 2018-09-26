@@ -1,0 +1,2 @@
+module CustomerBookingsHelper
+end

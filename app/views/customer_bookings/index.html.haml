@@ -1,0 +1,54 @@
+
+- if current_user.present?
+  %h1 Listing customer_bookings
+
+  %table
+    %thead
+      %tr
+        %th Num of boxes
+        %th Destination address
+        %th Pickup address
+        %th Departure date
+        %th Arrival date
+        %th Message
+        - if current_user.email == 'susanto@mail.com' || current_user.email == 'brother@mail.com'
+          %th User email
+          %th Status
+          %th Pickup datetime
+          %th Cost
+          %th Hbl number
+          %th Message to customer
+          %th
+          %th
+        %th
+
+    %tbody
+      - @customer_bookings.each do |customer_booking|
+        - if current_user.present?
+          - if customer_booking.user_email == current_user.email || current_user.email == 'susanto@mail.com' || current_user.email == 'brother@mail.com'
+            %tr
+              %td= customer_booking.num_of_boxes
+              %td= customer_booking.destination_address
+              %td= customer_booking.pickup_address
+              %td= customer_booking.departure_date
+              %td= customer_booking.arrival_date
+              %td= customer_booking.message
+              - if current_user.email == 'susanto@mail.com' || current_user.email == 'brother@mail.com'
+                %td= customer_booking.user_email
+              %td= customer_booking.status
+              %td= customer_booking.pickup_datetime
+              %td= customer_booking.cost
+              %td= customer_booking.HBL_number
+              %td= customer_booking.message_to_customer
+              %td= link_to 'Show', customer_booking
+              - if current_user.email == 'susanto@mail.com'
+                %td= link_to 'Edit', edit_customer_booking_path(customer_booking)
+                %td= link_to 'Destroy', customer_booking, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+  %br
+  - if current_user.present?
+    - if current_user.email != 'brother@mail.com'
+      = link_to 'New Customer booking', new_customer_booking_path
+- else
+  %h3 Welcome to Susanto Delivery
+  %h4 Please Sign In or Sign Up to Begin.
