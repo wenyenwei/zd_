@@ -1,9 +1,9 @@
 # Overview
 see here for the files: 
 
-* html: app/views/customer_bookings && app/views/devise
+* `html: app/views/customer_bookings && app/views/devise`
 
-* css: app/assets/stylesheets -> find similar name files
+* `css: app/assets/stylesheets -> find similar name files`
 
 # Setup
 
@@ -18,8 +18,20 @@ Once you've got the required ruby installed, run the following commands:
 
 This should download all the required project dependencies.
 
+To install datanase, run
+
+* `rake db:migrate`
+
+
 # Running the app
 At this point you should be all good to go. In order to run the rails app, type the following:
 
 * `rails server`
+
+# Accounts
+
+* `username: susatno, password: password`
+
+* `username: brother, password: password`
+
 
