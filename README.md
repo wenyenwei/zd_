@@ -33,6 +33,7 @@ see here for the files:
 At this point you should be all good to go. In order to run the rails app, type the following:
 
 * `rails server`
+* `go to localhost:3000`
 
 # Accounts
 
