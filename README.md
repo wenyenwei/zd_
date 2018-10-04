@@ -1,9 +1,7 @@
-# Overview
-see here for the files: 
+# Important
+* `git clone https://github.com/wenyenwei/zd_.git`
 
-* `html: app/views/customer_bookings && app/views/devise`
-
-* `css: app/assets/stylesheets -> find similar name files`
+* `git checkout -b 你的名字`
 
 # Setup
 
@@ -21,6 +19,14 @@ This should download all the required project dependencies.
 To install datanase, run
 
 * `rake db:migrate`
+
+
+# Files
+see here for the files: 
+
+* `html: app/views/customer_bookings && app/views/devise`
+
+* `css: app/assets/stylesheets -> find similar name files`
 
 
 # Running the app
