@@ -1,6 +1,8 @@
 # Important
 * `git clone https://github.com/wenyenwei/zd_.git`
 
+* `git checkout spm_customer_booking`
+
 * `git checkout -b 你的名字`
 
 # Setup
