@@ -30,7 +30,7 @@
   - if current_user.email == 'susanto@mail.com'
     .field
       = f.label :status
-      = f.select_tag :status, options_for_select(["To be Approved", "Request Accepted", "Pick-up Scheduled", "To be Shipped", "Shipped", "Arrived at Destination", "Delivered", "Delivery Delayed"].collect{ |s| [s, s] })
+      = f.select :status, options_for_select(["To be Approved", "Request Accepted", "Pick-up Scheduled", "To be Shipped", "Shipped", "Arrived at Destination", "Delivered", "Delivery Delayed"].collect{ |s| [s, s] })
     .field
       = f.label :pickup_datetime
       = f.datetime_select :pickup_datetime
