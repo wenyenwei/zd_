@@ -24,8 +24,8 @@
   .field
     = f.label :message
     = f.text_field :message
-  .field
-    - if current_user.email != 'susanto@mail.com' && current_user.email != 'brother@mail.com' 
+  - if current_user.email != 'susanto@mail.com' && current_user.email != 'brother@mail.com' 
+    .field
       = f.hidden_field :user_email, value: current_user.email
   - if current_user.email == 'susanto@mail.com'
     .field
