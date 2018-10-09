@@ -1,9 +1,9 @@
-# Overview
-Zendesk Intern Challenge. Build on rails.
-Up on heroku:
-https://boiling-garden-33930.herokuapp.com/
+# Important
+* `git clone https://github.com/wenyenwei/zd_.git`
 
-* Note: You may find the last few commits confusing, it's because heroku doesn't support sqlite3 instead it uses postgres. Thus, some of the adjustments have to be done to deploy the webapp to heroku. See https://devcenter.heroku.com/articles/sqlite3 for more info.
+* `git checkout spm_customer_booking`
+
+* `git checkout -b 你的名字`
 
 # Setup
 
@@ -18,26 +18,29 @@ Once you've got the required ruby installed, run the following commands:
 
 This should download all the required project dependencies.
 
-## Environment variables setup
+To install datanase, run
 
-Copy the file `.env.example` to a new file named `.env` and fill in your zendesk authentication info accordingly (replace the whole braces).
+* `rake db:migrate`
 
-If you don't want to use your zendesk authentication info, you can simply view on heroku with my variables setup: https://boiling-garden-33930.herokuapp.com/
+
+# Files
+see here for the files: 
+
+* `html: app/views/customer_bookings && app/views/devise`
+
+* `css: app/assets/stylesheets -> find similar name files`
+
 
 # Running the app
 At this point you should be all good to go. In order to run the rails app, type the following:
 
 * `rails server`
+* `go to localhost:3000`
+
+# Accounts
+
+* `username: susatno, password: password`
+
+* `username: brother, password: password`
 
 
-# Testing the app
-To do unit testing to the app, simply follow below:
-
-## Unit tests
-These are written using rails testing. Find unit tests in the `test` folder. For this project, simple tests are mainly done in `test/controller/home_controller_test.rb`
-
-To run unit tests, run:
-
-* `rake`
-
-* Note: If you didn't fill in your zendesk authentication info in step `Environment variables setup`, you will get errors in unit tests due to incomplete authentication info.
