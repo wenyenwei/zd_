@@ -1,5 +1,7 @@
 class CustomerBookingsController < ApplicationController
+  before_action :auth
   before_action :set_customer_booking, only: [:show, :edit, :update, :destroy]
+
 
   # GET /customer_bookings
   # GET /customer_bookings.json
@@ -72,5 +74,11 @@ class CustomerBookingsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def customer_booking_params
       params.require(:customer_booking).permit(:num_of_boxes, :destination_address, :pickup_address, :departure_date, :arrival_date, :message, :user_email, :status, :pickup_datetime, :cost, :HBL_number, :message_to_customer)
+    end
+
+    def auth
+      if current_user.nil?
+        redirect_to new_user_session_path
+      end  
     end
 end
