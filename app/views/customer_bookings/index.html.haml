@@ -47,7 +47,7 @@
 
   %br
   - if current_user.present?
-    - if current_user.email != 'brother@mail.com'
+    - if current_user.email != 'brother@mail.com' && current_user.email != 'susanto@mail.com'
       = link_to 'New Customer booking', new_customer_booking_path
 - else
   %h3 Welcome to Susanto Delivery

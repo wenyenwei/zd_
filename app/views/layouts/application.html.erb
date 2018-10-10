@@ -29,7 +29,7 @@
           <ul class="nav navbar-nav">
             <%- if user_signed_in? %>
               <li><%= link_to "View Bookings", customer_bookings_path %></li>
-              <%- if current_user.email != 'brother@mail.com' %>
+              <%- if current_user.email != 'brother@mail.com' && current_user.email != 'susanto@mail.com' %>
                 <li><%= link_to "Add Bookings", new_customer_booking_path %></li>
               <% end %>
             <% end %>
