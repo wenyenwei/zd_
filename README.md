@@ -3,7 +3,7 @@
 
 # Accounts
 
-* `username: susatno@mail.com, password: password`
+* `username: susato@mail.com, password: password`
 
 * `username: brother@mail.com, password: password`
 
