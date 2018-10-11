@@ -1,9 +1,12 @@
-# Important
-* `git clone https://github.com/wenyenwei/zd_.git`
+# Introduction
+* Up on heroku https://floating-reaches-39993.herokuapp.com/
 
-* `git checkout spm_customer_booking`
+# Accounts
 
-* `git checkout -b 你的名字`
+* `username: susato@mail.com, password: password`
+
+* `username: brother@mail.com, password: password`
+
 
 # Setup
 
