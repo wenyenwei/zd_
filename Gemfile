@@ -22,6 +22,11 @@ gem 'jbuilder', '~> 2.5'
 gem 'font-awesome-rails'
 gem 'graphql'
 gem 'devise', '~> 4.5'
+gem 'twilio-ruby', '~> 5.13.0'
+gem 'slack-notifier'
+gem 'rufus-scheduler'
+gem 'json'
+
 
 
 group :development, :test do
