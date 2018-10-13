@@ -18,7 +18,7 @@ class Smsbot
 
         # setup SMS
         puts 'scheduling...'
-        scheduler.every '24h', :first_in => '1s' do
+        scheduler.every '24h', :first_in => '7h' do
           send_to_me("It's a new day! Get new shifts and users from WIW!")
           Faraday_WIW.work
 
@@ -33,7 +33,7 @@ class Smsbot
           end
 
           send_to_me("Daily work scheduled!")
-          scheduler.every '24h', :first_in => '12h' do
+          scheduler.every '24h', :first_in => '1s' do
             cleanup_all
           end
         end
