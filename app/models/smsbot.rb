@@ -18,11 +18,11 @@ class Smsbot
 
         # setup SMS
         puts 'scheduling...'
-        scheduler.every '24h', :first_in => '13h' do
-          send_to_me("It's a new day! Get new shifts and users from WIW!")
+        scheduler.every '24h', :first_in => '1m' do
+          send_to_me(":strawberry: It's a new day! Get new shifts from WIW!")
           Faraday_WIW.work
 
-          send_to_me("Get unique times of shifts!")
+          send_to_me(":doughnut: Get unique times of shifts!")
           Faraday_WIW.shifts_check_scheduler.each do |time|
             scheduler.at (Time.parse(time) - 2.5*60*60).to_s do
               scheduled_sends(time, client)
@@ -32,11 +32,12 @@ class Smsbot
             end
           end
 
-          send_to_me("Daily work scheduled!")
-          scheduler.every '24h', :first_in => '1m' do
+          send_to_me(":wine_glass: Daily work scheduled!")
+        end
+
+        scheduler.every '24h', :first_in => '5s' do
             cleanup_all
           end
-        end
 
         puts 'All scheduling done!'
 
@@ -55,7 +56,7 @@ class Smsbot
       ReadWrite.write("current_shifts.json", "public", "files", [])
       ReadWrite.write("wiw_users.json", "public", "files", [])
       ReadWrite.write("wiw_locations.json", "public", "files", [])
-      send_to_me("Cleared up.")
+      send_to_me(":kiwifruit: Cleared up.")
     end
 
     def cleanup_msg
