@@ -39,7 +39,6 @@
   = @customer_booking.message_to_customer
 
 - if current_user.present?
-  = current_user.email
   - if current_user.email == 'susanto@mail.com'
     = link_to 'Edit', edit_customer_booking_path(@customer_booking)
     \|
