@@ -30,7 +30,7 @@
     = @customer_booking.pickup_datetime
   %p
     %b Cost:
-    = @customer_booking.cost
+    = "$"+ @customer_booking.num_of_boxes * 35
   %p
     %b Hbl number:
     = @customer_booking.HBL_number

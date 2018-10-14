@@ -34,9 +34,9 @@
     .field
       = f.label :pickup_datetime
       = f.datetime_select :pickup_datetime
-    .field
-      = f.label :cost
-      = f.number_field :cost, value: 35 * @customer_booking.num_of_boxes
+    / .field
+    /   = f.label :cost
+    /   = f.number_field :cost, value: 35 * @customer_booking.num_of_boxes
     .field
       = f.label :HBL_number
       = f.text_field :HBL_number

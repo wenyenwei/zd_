@@ -37,7 +37,7 @@
                 %td= customer_booking.user_email
               %td= customer_booking.status
               %td= customer_booking.pickup_datetime
-              %td= customer_booking.cost
+              %td= "$" + customer_booking.num_of_boxes * 35
               %td= customer_booking.HBL_number
               %td= customer_booking.message_to_customer
               %td= link_to 'Show', customer_booking
