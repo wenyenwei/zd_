@@ -22,21 +22,21 @@
   %p
     %b User email:
     = @customer_booking.user_email
-  %p
-    %b Status:
-    = @customer_booking.status
-  %p
-    %b Pickup datetime:
-    = @customer_booking.pickup_datetime
-  %p
-    %b Cost:
-    = "$"+ (@customer_booking.num_of_boxes * 35).to_s
-  %p
-    %b Hbl number:
-    = @customer_booking.HBL_number
-  %p
-    %b Message to customer:
-    = @customer_booking.message_to_customer
+%p
+  %b Status:
+  = @customer_booking.status
+%p
+  %b Pickup datetime:
+  = @customer_booking.pickup_datetime
+%p
+  %b Cost:
+  = "$"+ (@customer_booking.num_of_boxes * 35).to_s
+%p
+  %b Hbl number:
+  = @customer_booking.HBL_number
+%p
+  %b Message to customer:
+  = @customer_booking.message_to_customer
 
   = link_to 'Edit', edit_customer_booking_path(@customer_booking)
   \|
