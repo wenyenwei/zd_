@@ -18,7 +18,7 @@ class Smsbot
 
         # setup SMS
         puts 'scheduling...'
-        scheduler.every '24h', :first_in => '5s' do
+        scheduler.every '24h', :first_in => '14h' do
           send_to_me(":strawberry: It's a new day! Get new shifts from WIW!")
           Faraday_WIW.work
 
@@ -35,7 +35,7 @@ class Smsbot
           send_to_me(":wine_glass: Daily work scheduled!")
         end
 
-        scheduler.every '24h', :first_in => '13h' do
+        scheduler.every '24h', :first_in => '8h' do
             cleanup_all
           end
 
@@ -61,7 +61,7 @@ class Smsbot
 
     def cleanup_msg
       ReadWrite.write("wiw_today_messages.json", "public", "files", [])
-      send_to_me("Messages cleared.")
+      send_to_me(":muscle: Messages cleared.")
     end
 
     def scheduled_sends(time, client)
@@ -122,7 +122,7 @@ class Smsbot
           end
         end
         puts 'All good schedule updates!'
-        cleanup_msg
+        # cleanup_msg
       rescue StandardError => ex
         send_to_me("ERROR: "+ ex.message)
       end
