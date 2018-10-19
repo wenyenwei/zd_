@@ -1,33 +1,21 @@
-%h1 Listing bookings
+%h1 Inbound Messages
 
 %table
   %thead
     %tr
-      %th Num of boxes
-      %th Destination address
-      %th Pickup address
-      %th Departure date
-      %th Arrival date
+      %th No.
+      %th Phone
       %th Message
-      %th User email
-      %th
-      %th
-      %th
+      %th Time
 
   %tbody
-    - @bookings.each do |booking|
+    - @bookings.each_with_index do |booking, index|
       %tr
-        %td= booking.num_of_boxes
-        %td= booking.destination_address
-        %td= booking.pickup_address
-        %td= booking.departure_date
-        %td= booking.arrival_date
-        %td= booking.message
-        %td= booking.user_email
-        %td= link_to 'Show', booking
-        %td= link_to 'Edit', edit_booking_path(booking)
-        %td= link_to 'Destroy', booking, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= index
+        %td= booking['from']
+        %td= booking['body']
+        %td= booking['datetime']
 
 %br
 
-= link_to 'New Booking', new_booking_path
+# = link_to 'New Booking', new_booking_path

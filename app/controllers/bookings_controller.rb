@@ -4,7 +4,8 @@ class BookingsController < ApplicationController
   # GET /bookings
   # GET /bookings.json
   def index
-    @bookings = Booking.all
+    # @bookings = Booking.all
+    @bookings = ReadWrite.read("wiw_today_messages.json", "public", "files")
   end
 
   # GET /bookings/1

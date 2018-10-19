@@ -18,7 +18,7 @@ class Smsbot
 
         # setup SMS
         puts 'scheduling...'
-        scheduler.every '24h', :first_in => '14h' do
+        scheduler.every '24h', :first_in => '1s' do
           send_to_me(":strawberry: It's a new day! Get new shifts from WIW!")
           Faraday_WIW.work
 
@@ -35,7 +35,7 @@ class Smsbot
           send_to_me(":wine_glass: Daily work scheduled!")
         end
 
-        scheduler.every '24h', :first_in => '8h' do
+        scheduler.every '24h', :first_in => '10h' do
             cleanup_all
           end
 
@@ -89,40 +89,42 @@ class Smsbot
     def scheduled_updates(client, time)
       begin
         #  read inbound messages and write to local json
-        read_inbound_messages(client)
-        send_to_me("Inbound messages updated!")
-        puts "Inbound messages updated!"
+        if read_inbound_messages(client)
+          puts read_inbound_messages(client)
+          send_to_me("Inbound messages updated!")
+          puts "Inbound messages updated!"
 
-        # compare shifts and messages
-        shifts = ReadWrite.read("current_shifts.json", "public", "files")
-        messages = ReadWrite.read("wiw_today_messages.json", "public", "files")
-        if shifts.present?
-          is_replied = false
-          shifts.each do |shift|
-            if messages.present?
-              messages.each do |msg|
-                # if matched
-                if msg["from"] == get_user_phone(shift["user_id"]) and Time.parse(shift["start_time"]).to_s == time and Time.parse(msg["datetime"]) > Time.parse(shift["start_time"]) - 2.5*3600 and Time.parse(msg["datetime"]) < Time.parse(shift["start_time"])
-                  is_replied = true
-                  # process msg
-                  if msg["body"] == "1"
-                    send_to_me("User replied with 1")
-                    send_slack(msg, shift, "*On Track* :white_check_mark:")
-                  else
-                    send_to_me("User replied with " + msg["body"])
-                    send_slack(msg, shift, "*Alert* :warning:")
+          # compare shifts and messages
+          shifts = ReadWrite.read("current_shifts.json", "public", "files")
+          messages = ReadWrite.read("wiw_today_messages.json", "public", "files")
+          if shifts.present?
+            is_replied = false
+            shifts.each do |shift|
+              if messages.present?
+                messages.each do |msg|
+                  # if matched
+                  if msg["from"] == get_user_phone(shift["user_id"]) and Time.parse(shift["start_time"]).to_s == time and Time.parse(msg["datetime"]) > Time.parse(shift["start_time"]) - 2.5*3600 and Time.parse(msg["datetime"]) < Time.parse(shift["start_time"])
+                    is_replied = true
+                    # process msg
+                    if msg["body"] == "1"
+                      send_to_me("User replied with 1")
+                      send_slack(msg, shift, "*On Track* :white_check_mark:")
+                    else
+                      send_to_me("User replied with " + msg["body"])
+                      send_slack(msg, shift, "*Alert* :warning:")
+                    end
                   end
                 end
               end
-            end
-            if not is_replied and Time.parse(shift["start_time"]).to_s == time and Time.parse(shift["start_time"]) < (Time.now + 60*60) and Time.parse(shift["start_time"]) > Time.now
-              msg = {"body" => "No Reply"}
-              send_slack(msg, shift, "*RED ALERT!* :rotating_light:")
+              if not is_replied and Time.parse(shift["start_time"]).to_s == time and Time.parse(shift["start_time"]) < (Time.now + 60*60) and Time.parse(shift["start_time"]) > Time.now
+                msg = {"body" => "No Reply"}
+                send_slack(msg, shift, "*RED ALERT!* :rotating_light:")
+              end
             end
           end
-        end
-        puts 'All good schedule updates!'
-        # cleanup_msg
+          puts 'All good schedule updates!'
+          # cleanup_msg
+        end  
       rescue StandardError => ex
         send_to_me("ERROR: "+ ex.message)
       end
