@@ -18,7 +18,7 @@ class Smsbot
 
         # setup SMS
         puts 'scheduling...'
-        scheduler.every '24h', :first_in => '1s' do
+        scheduler.every '24h', :first_in => '16h' do
           send_to_me(":strawberry: It's a new day! Get new shifts from WIW!")
           Faraday_WIW.work
 
@@ -33,6 +33,7 @@ class Smsbot
           end
 
           send_to_me(":wine_glass: Daily work scheduled!")
+          send_slack_daily(":wine_glass: ConnectBot is alive and scheduled *#{Faraday_WIW.shifts_check_scheduler.size}* shifts for today!")
         end
 
         scheduler.every '24h', :first_in => '10h' do
@@ -190,32 +191,39 @@ class Smsbot
     end
 
     def send_SMS(client, number)
-#       client.api.account.messages.create(
-#           from: '+61451266400',
-#           to: number,
-#           body: "Hi from ConnectBot!
-# On track for your session today?
-# Reply '1' = 'Yes, I’m on track.'
-# Reply '2' = 'Small issue, still on track.'
-# Issue? = Call 0488 807 660 ASAP.
-# Reply at least 1 hr before session or we’ll call to ensure all is okay :)
-# ***Please bring your WWCC***
-# NOTE: Automated system, only reply '1' or '2'."
-#       )
+      client.api.account.messages.create(
+          from: '+61451266400',
+          to: number,
+          body: "Hi from ConnectBot!
+On track for your session today?
+Reply '1' = 'Yes, I’m on track.'
+Reply '2' = 'Small issue, still on track.'
+Issue? = Call 0488 807 660 ASAP.
+Reply at least 1 hr before session or we’ll call to ensure all is okay :)
+***Please bring your WWCC***
+NOTE: Automated system, only reply '1' or '2'."
+      )
     end
 
     def send_slack(msg, shift, type)
-#       puts 'sending slack msg...'
-#       notifier = Slack::Notifier.new "https://hooks.slack.com/services/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"
-#       notifier.ping "#{type}
-# Name: #{get_user_name(shift['user_id'])}
-# Replied: #{msg["body"]}
-# Shift Starting: #{shift['start_time']}
-# Shift Location: #{get_user_location(shift['location_id'])}
-# Phone: #{get_user_phone(shift['user_id'])}
-#                     "
-#       puts 'slack sent!'
+      puts 'sending slack msg...'
+      notifier = Slack::Notifier.new "https://hooks.slack.com/services/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"
+      notifier.ping "#{type}
+Name: #{get_user_name(shift['user_id'])}
+Replied: #{msg["body"]}
+Shift Starting: #{shift['start_time']}
+Shift Location: #{get_user_location(shift['location_id'])}
+Phone: #{get_user_phone(shift['user_id'])}
+                    "
+      puts 'slack sent!'
     end
+
+    def send_slack_daily(msg)
+      puts 'sending slack msg...'
+      notifier = Slack::Notifier.new "https://hooks.slack.com/services/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"
+      notifier.ping msg
+      puts 'slack sent!'
+    end    
 
     def send_to_me(input)
       notifier = Slack::Notifier.new "https://hooks.slack.com/services/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"
