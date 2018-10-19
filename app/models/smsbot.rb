@@ -90,7 +90,6 @@ class Smsbot
       begin
         #  read inbound messages and write to local json
         if read_inbound_messages(client)
-          puts read_inbound_messages(client)
           send_to_me("Inbound messages updated!")
           puts "Inbound messages updated!"
 
@@ -100,24 +99,30 @@ class Smsbot
           if shifts.present?
             is_replied = false
             shifts.each do |shift|
-              if messages.present?
-                messages.each do |msg|
-                  # if matched
-                  if msg["from"] == get_user_phone(shift["user_id"]) and Time.parse(shift["start_time"]).to_s == time and Time.parse(msg["datetime"]) > Time.parse(shift["start_time"]) - 2.5*3600 and Time.parse(msg["datetime"]) < Time.parse(shift["start_time"])
-                    is_replied = true
-                    # process msg
-                    if msg["body"] == "1"
-                      send_to_me("User replied with 1")
-                      send_slack(msg, shift, "*On Track* :white_check_mark:")
-                    else
-                      send_to_me("User replied with " + msg["body"])
-                      send_slack(msg, shift, "*Alert* :warning:")
+              completed_reading_msg = false
+              while not completed_reading_msg
+                if messages.present?
+                  messages.each do |msg|
+                    # if matched
+                    if msg["from"] == get_user_phone(shift["user_id"]) and Time.parse(shift["start_time"]).to_s == time and Time.parse(msg["datetime"]) > Time.parse(shift["start_time"]) - 2.5*3600 and Time.parse(msg["datetime"]) < Time.parse(shift["start_time"])
+                      is_replied = true
+                      # process msg
+                      if msg["body"] == "1"
+                        send_to_me("User replied with 1")
+                        send_slack(msg, shift, "*On Track* :white_check_mark:")
+                      else
+                        send_to_me("User replied with " + msg["body"])
+                        send_slack(msg, shift, "*Alert* :warning:")
+                      end
                     end
                   end
+                  completed_reading_msg = true
+                else
+                    completed_reading_msg = true
                 end
-              end
+              end  
               if not is_replied and Time.parse(shift["start_time"]).to_s == time and Time.parse(shift["start_time"]) < (Time.now + 60*60) and Time.parse(shift["start_time"]) > Time.now
-                msg = {"body" => "No Reply"}
+                msg = {"body" => "No Reply, Check https://floating-reaches-39993.herokuapp.com/"}
                 send_slack(msg, shift, "*RED ALERT!* :rotating_light:")
               end
             end
@@ -185,31 +190,31 @@ class Smsbot
     end
 
     def send_SMS(client, number)
-      client.api.account.messages.create(
-          from: '+61451266400',
-          to: number,
-          body: "Hi from ConnectBot!
-On track for your session today?
-Reply '1' = 'Yes, I’m on track.'
-Reply '2' = 'Small issue, still on track.'
-Issue? = Call 0488 807 660 ASAP.
-Reply at least 1 hr before session or we’ll call to ensure all is okay :)
-***Please bring your WWCC***
-NOTE: Automated system, only reply '1' or '2'."
-      )
+#       client.api.account.messages.create(
+#           from: '+61451266400',
+#           to: number,
+#           body: "Hi from ConnectBot!
+# On track for your session today?
+# Reply '1' = 'Yes, I’m on track.'
+# Reply '2' = 'Small issue, still on track.'
+# Issue? = Call 0488 807 660 ASAP.
+# Reply at least 1 hr before session or we’ll call to ensure all is okay :)
+# ***Please bring your WWCC***
+# NOTE: Automated system, only reply '1' or '2'."
+#       )
     end
 
     def send_slack(msg, shift, type)
-      puts 'sending slack msg...'
-      notifier = Slack::Notifier.new "https://hooks.slack.com/services/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"
-      notifier.ping "#{type}
-Name: #{get_user_name(shift['user_id'])}
-Replied: #{msg["body"]}
-Shift Starting: #{shift['start_time']}
-Shift Location: #{get_user_location(shift['location_id'])}
-Phone: #{get_user_phone(shift['user_id'])}
-                    "
-      puts 'slack sent!'
+#       puts 'sending slack msg...'
+#       notifier = Slack::Notifier.new "https://hooks.slack.com/services/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"
+#       notifier.ping "#{type}
+# Name: #{get_user_name(shift['user_id'])}
+# Replied: #{msg["body"]}
+# Shift Starting: #{shift['start_time']}
+# Shift Location: #{get_user_location(shift['location_id'])}
+# Phone: #{get_user_phone(shift['user_id'])}
+#                     "
+#       puts 'slack sent!'
     end
 
     def send_to_me(input)
